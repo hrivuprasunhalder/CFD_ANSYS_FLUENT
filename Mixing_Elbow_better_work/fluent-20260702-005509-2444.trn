@@ -1,0 +1,222 @@
+Auto-Transcript Start Time:  00:55:09, 02 Jul 2026 Bangladesh Standard Time 
+Current Directory: "D:\works\flowthermolab\assignment 16"
+
+              Welcome to ANSYS Fluent 2026 R1
+
+              Copyright 2026 Synopsys, Inc. and ANSYS, Inc. All rights reserved.
+              Unauthorized use, distribution or duplication is prohibited.
+              This product is subject to U.S. laws governing export and re-export.
+              For full Legal Notice, see documentation.
+
+Build Time: Feb  2 2026 16:32:00 EST  Build Id: 10262  
+ 
+Connected License Server List:	<Non FlexNet Publisher License Server (FNPLS)>
+
+     --------------------------------------------------------------
+     This is a student version of ANSYS FLUENT. Usage of this product
+     license is limited to the terms and conditions specified in your ANSYS
+     license form, additional terms section.
+     --------------------------------------------------------------
+Host spawning Node 0 on machine "DESKTOP-7GPBB94" (win64).
+Host waiting for connection from Node 0 at 127.0.0.1:53179 
+
+Node 0 connecting to the Host ... connection established.
+
+--------------------------------------------------------------------------------
+ID    Hostname         Core  O.S.         PID    CPU Model Name                 
+--------------------------------------------------------------------------------
+n2    DESKTOP-7GPBB94  3/4  Windows-x64  8356   Intel(R) Core(TM) i5-4590      
+n1    DESKTOP-7GPBB94  2/4  Windows-x64  4844   Intel(R) Core(TM) i5-4590      
+n0*   DESKTOP-7GPBB94  1/4  Windows-x64  10056  Intel(R) Core(TM) i5-4590      
+host  DESKTOP-7GPBB94       Windows-x64  7108   Intel(R) Core(TM) i5-4590      
+
+MPI Option Selected: intel
+Selected system interconnect: default
+--------------------------------------------------------------------------------
+
+Cleanup script file is D:\\works\\flowthermolab\\assignment 16\\cleanup-fluent-DESKTOP-7GPBB94-7108.bat
+
+DESKTOP-7GPBB94 is already loaded (40.3803).                       Process affinity not being set.
+
+Graphics driver currently in use: dx11
+
+(cx-gui-do cx-activate-tab-index "NavigationPane*Frame1(TreeTab)" 0)
+
+Posting ANSYS Product Improvement Program startup data
+Done.
+
+Meshing> (cx-gui-do cx-activate-item "MenuBar*ReadSubMenu*Mesh...")
+(cx-gui-do cx-set-file-dialog-entries "Select File" '( "blocked.msh.h5") "CFF Mesh Files (*.msh.h5 *.cas.h5 )")
+Reading "D:/works/flowthermolab/assignment 16/blocked.msh.h5" ...
+3D mesh
+nodes: 58708
+edges: 80
+faces: 87634 
+cells: 17670 
+reading 3 node zones
+reading 3 edge zones
+reading 5 face zones
+reading 1 cell zones
+reading boundary layer flags...
+updating sub-domains...
+done.
+
+Read Mesh Summary:
+	nodes : 3 zones (2 boundary, 1 interior)
+	      : 58708 entities (6335 boundary, 52373 interior)
+	edges : 3 zones (3 boundary, 0 interior)
+	      : 80 entities (80 boundary, 0 interior)
+	faces : 5 zones (4 boundary, 1 interior)
+	      : 87634 entities (3328 boundary, 84306 interior)
+	cells : 1 zone (0 boundary, 1 interior)
+	      : 17670 entities (0 boundary, 17670 interior)
+analyzing boundary connectivity...done.
+(cx-use-window-id 51)
+(cx-set-camera-relative '(-20.5018 -54.9352 53.2469) '(0 0 0) '(0.188066 0.220614 0.29498) 0 0)
+(cx-use-window-id 51)
+(cx-set-camera-relative '(49.1706 -32.0368 -221.276) '(0 0 0) '(0.273392 0.0683107 0.285282) 0 0)
+(cx-use-window-id 51)
+(cx-set-camera-relative '(-79.6703 -5.51081 -39.9308) '(0 0 0) '(0.0124456 0.00277466 -0.0388803) 0 0)
+(cx-use-window-id 51)
+(cx-set-camera-relative '(-27.612 5.09855 -0.670685) '(0 0 0) '(-0.000817865 -0.00260627 0.041508) 0 0)
+(cx-gui-do cx-activate-item "MenuBar*FileMenu*Save Picture...")
+(cx-gui-do cx-activate-item "Save Picture*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-file-dialog-entries "Select File" '( "D:/works/flowthermolab/assignment 16/pngs/blocked") "Hardcopy Files (*.png)")
+(cx-gui-do cx-activate-item "Save Picture*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*PushButton1(Clipping Planes)")
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*Table5*CheckButton2(Insert Clipping Planes)" #t)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*Table5*CheckButton2(Insert Clipping Planes)")
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*ButtonBox1*Limit in Z" #t)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*ButtonBox1*Limit in Z")
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*ButtonBox1*Limit in Y" #t)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*ButtonBox1*Limit in Y")
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*ButtonBox1*Limit in X" #t)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*ButtonBox1*Limit in X")
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*ButtonBox1*Limit in Z" #t)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*ButtonBox1*Limit in Z")
+(cx-use-window-id 51)
+(cx-set-camera-relative '(-113.595 -22.8926 204.889) '(0 0 0) '(0.0337438 -0.0134689 0.10205) 0 0)
+(cx-use-window-id 51)
+(cx-set-camera-relative '(86.1997 -5.36489 67.6824) '(0 0 0) '(0.368324 -0.0812345 0.0308846) 0 0)
+(cx-use-window-id 51)
+(cx-set-camera-relative '(131.16 -48.4393 -55.0286) '(0 0 0) '(-0.10555 -0.0263503 0.185987) 0 0)
+(cx-gui-do cx-activate-item "ToolBar*Mesh Display*fl_mesh_svg_graphics_toolbar")
+(cx-gui-do cx-activate-tab-index "Display Grid*Frame1" 0)
+(cx-gui-do cx-activate-tab-index "Display Grid*Frame1" 1)
+(cx-gui-do cx-activate-tab-index "Display Grid*Frame1" 0)
+(cx-gui-do cx-activate-tab-index "Display Grid*Frame1" 2)
+(cx-gui-do cx-activate-tab-index "Display Grid*Frame1" 0)
+(cx-gui-do cx-activate-tab-index "Display Grid*Frame1" 3)
+(cx-gui-do cx-activate-tab-index "Display Grid*Frame1" 0)
+(cx-gui-do cx-activate-tab-index "Display Grid*Frame1" 4)
+(cx-gui-do cx-activate-tab-index "Display Grid*Frame1" 0)
+(cx-gui-do cx-activate-tab-index "Display Grid*Frame1" 5)
+(cx-gui-do cx-activate-tab-index "Display Grid*Frame1" 0)
+(cx-gui-do cx-activate-tab-index "Display Grid*Frame1" 2)
+(cx-gui-do cx-activate-tab-index "Display Grid*Frame1" 0)
+(cx-gui-do cx-activate-tab-index "Display Grid*Frame1" 1)
+(cx-gui-do cx-activate-tab-index "Display Grid*Frame1" 2)
+(cx-gui-do cx-activate-tab-index "Display Grid*Frame1" 3)
+(cx-gui-do cx-set-list-selections "Display Grid*Frame1*Frame4(Cells)*Table1*Frame4*List1(Cell Zones)" '( 0))
+(cx-gui-do cx-activate-item "Display Grid*Frame1*Frame4(Cells)*Table1*Frame4*List1(Cell Zones)")
+(cx-gui-do cx-activate-item "Display Grid*PanelButtons*PushButton1(OK)")
+
+Info : Selected cell zones are not displayed. At least one of the options "Bounded" or "Size" or "Quality" should be enabled.
+(cx-gui-do cx-activate-item "Display Grid*PanelButtons*PushButton1(OK)")
+
+Info : Selected cell zones are not displayed. At least one of the options "Bounded" or "Size" or "Quality" should be enabled.
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-gui-do cx-set-list-selections "Display Grid*Frame1*Frame4(Cells)*Table1*Frame4*List1(Cell Zones)" '())
+(cx-gui-do cx-activate-item "Display Grid*Frame1*Frame4(Cells)*Table1*Frame4*List1(Cell Zones)")
+(cx-gui-do cx-activate-item "Display Grid*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-activate-tab-index "Display Grid*Frame1" 2)
+(cx-gui-do cx-activate-tab-index "Display Grid*Frame1" 0)
+(cx-gui-do cx-activate-item "Display Grid*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-activate-item "Display Grid*PanelButtons*PushButton2(Cancel)")
+(cx-use-window-id 51)
+(cx-set-camera-relative '(-1.65061 -0.0719795 1.35153) '(0 0 0) '(0.0282686 -0.0412693 -0.00125104) 0 0)
+Reading "D:/works/flowthermolab/assignment 16/blocked_workflow_files\TaskObject11.msh.h5" ...
+3D mesh
+nodes: 4204
+edges: 216
+faces: 7962 
+cells: 0 
+reading 2 node zones
+reading 6 edge zones
+reading 8 face zones
+
+Read Mesh Summary:
+	nodes : 2 zones (2 boundary, 0 interior)
+	      : 4204 entities (4204 boundary, 0 interior)
+	edges : 6 zones (6 boundary, 0 interior)
+	      : 216 entities (216 boundary, 0 interior)
+	faces : 8 zones (8 boundary, 0 interior)
+	      : 7962 entities (7962 boundary, 0 interior)
+	cells : 0 zones (0 boundary, 0 interior)
+	      : 0 entities (0 boundary, 0 interior)
+analyzing boundary connectivity...done.
+Writing "D:\works\flowthermolab\assignment 16\FM_DESKTOP-7GPBB94_2444\TaskObject11.msh.h5" ...
+writing 2 node zones
+writing 6 edge zones 
+writing 8 face zones 
+writing node curvature data
+done.
+checking object "volume-volume"...
+    skipping validating regions of mesh object "volume-volume"...done.
+auto meshing object volume-volume...
+
+processing scoped prisms...
+    starting orientation...
+done.
+    setting prism growth...done.
+done.
+Identifying Topology...
+
+Generating Prisms...
+
+Generating initial mesh...
+
+Refining mesh...
+
+Create polyhedra ...
+
+Merging Domains...
+done.
+
+                     name       id cells (quality < 0.05)  minimum quality cell count
+------------------------- -------- ---------------------- ---------------- ----------
+            volume-volume      108                      0       0.58412409      17752
+
+                     name       id cells (quality < 0.05)  minimum quality cell count
+------------------------- -------- ---------------------- ---------------- ----------
+          Overall Summary     none                      0       0.58412409      17752
+
+Total Number of Cell Zones : 1
+
+[Quality Measure : Orthogonal Quality]
+
+---------------- Volume mesh creation completed in :  0.09 minutes
+
+---------------- 17752 cells were created in :  0.09 minutes
+
+---------------- The mesh has a minimum Orthogonal Quality of:  0.58 
+
+---------------- The volume meshing of volume-volume is complete.
+
+(newline)
+
+
+Meshing> (cx-use-window-id 51)
+(cx-set-camera-relative '(-92.4489 -147.505 91.5379) '(0 0 0) '(0.247162 0.256336 0.588634) 0 0)
+(cx-use-window-id 51)
+(cx-gui-do cx-activate-item "MenuBar*FileMenu*Save Picture...")
+(cx-gui-do cx-activate-item "Save Picture*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-file-dialog-entries "Select File" '( "blocked_pt2.png") "Hardcopy Files (*.png)")
+(cx-gui-do cx-activate-item "Save Picture*PanelButtons*PushButton2(Cancel)")
+/exit y
+
+Posting ANSYS Product Improvement Program performance data 
+Done.
+Auto-Transcript Stop Time:  01:00:12, 02 Jul 2026 Bangladesh Standard Time 
+Total Transcript Time: 5 Minute 3 Second.

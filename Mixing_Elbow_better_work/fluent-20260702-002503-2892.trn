@@ -1,0 +1,607 @@
+Auto-Transcript Start Time:  00:25:03, 02 Jul 2026 Bangladesh Standard Time 
+Current Directory: "D:\works\flowthermolab\assignment 16"
+
+              Welcome to ANSYS Fluent 2026 R1
+
+              Copyright 2026 Synopsys, Inc. and ANSYS, Inc. All rights reserved.
+              Unauthorized use, distribution or duplication is prohibited.
+              This product is subject to U.S. laws governing export and re-export.
+              For full Legal Notice, see documentation.
+
+Build Time: Feb  2 2026 16:32:00 EST  Build Id: 10262  
+ 
+Connected License Server List:	<Non FlexNet Publisher License Server (FNPLS)>
+
+*********************************************
+Info: Your license enables 4-way parallel execution.
+For faster simulations, please start the application with the appropriate parallel options.
+*********************************************
+
+
+     --------------------------------------------------------------
+     This is a student version of ANSYS FLUENT. Usage of this product
+     license is limited to the terms and conditions specified in your ANSYS
+     license form, additional terms section.
+     --------------------------------------------------------------
+Host spawning Node 0 on machine "DESKTOP-7GPBB94" (win64).
+Host waiting for connection from Node 0 at 127.0.0.1:52032 
+
+Node 0 connecting to the Host ... connection established.
+
+-------------------------------------------------------------------------------
+ID    Hostname         Core  O.S.         PID   CPU Model Name                 
+-------------------------------------------------------------------------------
+n2    DESKTOP-7GPBB94  3/4  Windows-x64  6616  Intel(R) Core(TM) i5-4590      
+n1    DESKTOP-7GPBB94  2/4  Windows-x64  7904  Intel(R) Core(TM) i5-4590      
+n0*   DESKTOP-7GPBB94  1/4  Windows-x64  9924  Intel(R) Core(TM) i5-4590      
+host  DESKTOP-7GPBB94       Windows-x64  7492  Intel(R) Core(TM) i5-4590      
+
+MPI Option Selected: intel
+Selected system interconnect: default
+-------------------------------------------------------------------------------
+
+Cleanup script file is D:\\works\\flowthermolab\\assignment 16\\cleanup-fluent-DESKTOP-7GPBB94-7492.bat
+
+DESKTOP-7GPBB94 is already loaded (38.0998).                       Process affinity not being set.
+
+Graphics driver currently in use: dx11
+
+
+Posting ANSYS Product Improvement Program startup data
+Done.
+Fast-loading "D:\ANSYS\ANSYS Inc\ANSYS Student\v261\fluent\fluent26.1.0\\addons\afd\lib\hdfio.bin"
+Done.
+
+Reading from DESKTOP-7GPBB94:"D:/works/flowthermolab/assignment 16/blocked.msh.h5" in NODE0 mode ...
+  Reading mesh ...
+Warning: reading 2 partition grid onto 3 compute node machine.
+         will auto partition.
+       17670 cells,     1 cell zone  ...
+          17670 polyhedra cells,  zone id: 108
+       87634 faces,     5 face zones ...
+          84306 polygonal interior faces,  zone id: 107
+           2833 polygonal wall faces,  zone id: 18
+            192 polygonal pressure-outlet faces,  zone id: 17
+            111 polygonal velocity-inlet faces,  zone id: 16
+            192 polygonal velocity-inlet faces,  zone id: 15
+       58708 nodes,     3 node zones ...
+
+Building...
+     mesh
+	auto partitioning mesh by Metis (fast),
+	distributing mesh
+		parts...,
+		faces...,
+		nodes...,
+		cells...,
+        bandwidth reduction using Reverse Cuthill-McKee: 5642/423 = 13.3381
+  Reading boundary layer flags ...
+  Done.
+
+     materials,
+     interface,
+     domains,
+     zones,
+	Skipping thread 12 of domain 1 (not referenced by grid).
+	Skipping thread 13 of domain 1 (not referenced by grid).
+	Skipping thread 14 of domain 1 (not referenced by grid).
+	interior--volume-volume
+	wall
+	outlet
+	inlet_small
+	inlet_big
+	volume-volume
+     parallel,
+Done.
+Mesh is now scaled to meters.
+
+> (cx-gui-do cx-set-toggle-button2 "Key Behavioral Changes*Table1*CheckButton2(Don't show this message again)" #t)
+(cx-gui-do cx-activate-item "Key Behavioral Changes*Table1*CheckButton2(Don't show this message again)")
+(cx-gui-do cx-activate-item "Key Behavioral Changes*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Domain)*Table1*Table3(Mesh)*PushButton1(Display)")
+(cx-gui-do cx-set-toggle-button2 "Mesh Display*Table1*Frame1*Frame1*ToggleBox1(Options)*CheckButton2(Edges)" #t)
+(cx-gui-do cx-activate-item "Mesh Display*Table1*Frame1*Frame1*ToggleBox1(Options)*CheckButton2(Edges)")
+(cx-gui-do cx-activate-item "Mesh Display*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-activate-item "Mesh Display*PanelButtons*PushButton2(Cancel)")
+(cx-use-window-id 51)
+(cx-set-camera-relative '(0.544468 -0.477458 -0.226507) '(0 0 0) '(0.0255846 0.166644 0.60725) 0 0)
+(cx-use-window-id 51)
+(cx-set-camera-relative '(0.0715556 -0.103412 -0.0582663) '(0 0 0) '(0.262768 0.00445259 -0.536189) 0 0)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Domain)*Table1*Table3(Mesh)*PushButton3(Units)")
+(cx-gui-do cx-set-list-selections "Set Units*List1(Quantities)" '( 120))
+(cx-gui-do cx-activate-item "Set Units*List1(Quantities)")
+(cx-gui-do cx-set-list-selections "Set Units*List1(Quantities)" '( 110))
+(cx-gui-do cx-activate-item "Set Units*List1(Quantities)")
+(cx-gui-do cx-set-list-selections "Set Units*Frame4*List1(Units)" '( 1))
+(cx-gui-do cx-activate-item "Set Units*Frame4*List1(Units)")
+(cx-gui-do cx-activate-item "Set Units*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Domain)*Table1*Table3(Mesh)*PushButton4(Check)")
+(cx-gui-do cx-activate-item "MenuBar*PopupMenuCheck*Perform Mesh Check")
+
+ Domain Extents:
+   x-coordinate: min (m) = -2.032000e-01, max (m) = 2.030130e-01
+   y-coordinate: min (m) = -2.286000e-01, max (m) = 2.032000e-01
+   z-coordinate: min (m) = -5.067619e-02, max (m) = 5.067311e-02
+ Volume statistics:
+   minimum volume (m3): 6.364283e-10
+   maximum volume (m3): 2.118196e-06
+     total volume (m3): 5.215535e-03
+ Face area statistics:
+   minimum face area (m2): 2.349214e-12
+   maximum face area (m2): 1.708585e-04
+ Checking mesh.........................................
+ Done.
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Domain)*Table1*Table3(Mesh)*PushButton5(  Quality)")
+(cx-gui-do cx-activate-item "MenuBar*PopupMenuQuality*Evaluate Mesh Quality")
+
+Mesh Quality:
+
+Minimum Orthogonal Quality =  6.27708e-01 cell 803 on zone 108 (ID: 1835 on partition: 0) at location (-1.95876e-01, -1.60804e-01,  3.13210e-02)
+
+
+Maximum Aspect Ratio =  1.09773e+01 cell 3215 on zone 108 (ID: 12195 on partition: 2) at location ( 1.27826e-01, -1.65594e-01, -7.36947e-03)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Domain)*Table1*Table3(Mesh)*PushButton2(Info)")
+(cx-gui-do cx-activate-item "MenuBar*PopupMenuInfo*Size")
+
+Mesh Size
+
+Level    Cells    Faces    Nodes   Partitions
+    0    17670    87634    58625            3
+
+ 1 cell zone, 5 face zones.
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame3(Physics)*Table1*Table3(Solver)*PushButton1(General)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|General"))
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame3(Physics)*Table1*Table3(Solver)*PushButton2(Operating Conditions)")
+(cx-gui-do cx-activate-item "Operating Conditions*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame3(Physics)*Table1*PushButton1(Models)")
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame3(Physics)*Table1*PushButton1(Models)")
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame3(Physics)*Table1*Table3(Models)*PushButton2(Radiation)")
+(cx-gui-do cx-activate-item "Radiation Model*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Models|Energy (Off)"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Models|Energy (Off)"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Models|Energy (Off)"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Models|Energy (Off)"))
+(cx-gui-do cx-set-toggle-button2 "Energy*Table1(Energy)*ToggleBox1*CheckButton1(Energy Equation)" #t)
+(cx-gui-do cx-activate-item "Energy*Table1(Energy)*ToggleBox1*CheckButton1(Energy Equation)")
+(cx-gui-do cx-activate-item "Energy*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Models|Viscous (SST k-omega)"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Models|Viscous (SST k-omega)"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Models|Viscous (SST k-omega)"))
+(cx-gui-do cx-activate-item "Viscous Model*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame3(Physics)*Table1*PushButton1(Materials)")
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame3(Physics)*Table1*Table3(Materials)*PushButton1(Create/Edit)")
+(cx-gui-do cx-activate-item "Create/Edit Materials*Table1*Frame1*Frame2*ButtonBox2*PushButton1(Fluent Database)")
+(cx-gui-do cx-set-list-selections "Fluent Database Materials*Table1*Frame1*List1(Materials)" '( 575))
+(cx-gui-do cx-activate-item "Fluent Database Materials*Table1*Frame1*List1(Materials)")
+(cx-gui-do cx-activate-item "Fluent Database Materials*PanelButtons*PushButton6(Copy)")
+(cx-gui-do cx-activate-item "Fluent Database Materials*PanelButtons*PushButton1(Close)")
+(cx-gui-do cx-set-list-selections "Create/Edit Materials*Table1*Frame1*Table1*DropDownList4(Materials)" '( 1))
+(cx-gui-do cx-activate-item "Create/Edit Materials*Table1*Frame1*Table1*DropDownList4(Materials)")
+(cx-gui-do cx-activate-item "Create/Edit Materials*PanelButtons*PushButton3(Change/Create)")
+(cx-gui-do cx-activate-item "Create/Edit Materials*PanelButtons*PushButton1(Close)")
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame3(Physics)*Table1*PushButton1(Materials)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Materials|Fluid"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Materials|Fluid"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Materials|Fluid"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Materials|Fluid"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Materials|Fluid|water-liquid"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Materials|Fluid|water-liquid"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Materials|Fluid|water-liquid"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Materials|Fluid|water-liquid"))
+(cx-gui-do cx-activate-item "Create/Edit Materials*PanelButtons*PushButton1(Close)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Materials|Solid"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Materials|Solid"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Materials|Solid"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Cell Zone Conditions"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Cell Zone Conditions"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Cell Zone Conditions"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Cell Zone Conditions|Fluid"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Cell Zone Conditions|Fluid"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Cell Zone Conditions|Fluid"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Cell Zone Conditions|Fluid"))
+(cx-gui-do cx-activate-tab-index "Fluid*Frame2*Table3*Frame1" 0)
+(cx-gui-do cx-activate-tab-index "Fluid*Frame2*Table3*Frame1" 1)
+(cx-gui-do cx-activate-tab-index "Fluid*Frame2*Table3*Frame1" 0)
+(cx-gui-do cx-activate-tab-index "Fluid*Frame2*Table3*Frame1" 2)
+(cx-gui-do cx-activate-tab-index "Fluid*Frame2*Table3*Frame1" 0)
+(cx-gui-do cx-activate-tab-index "Fluid*Frame2*Table3*Frame1" 2)
+(cx-gui-do cx-activate-tab-index "Fluid*Frame2*Table3*Frame1" 0)
+(cx-gui-do cx-activate-tab-index "Fluid*Frame2*Table3*Frame1" 3)
+(cx-gui-do cx-activate-tab-index "Fluid*Frame2*Table3*Frame1" 0)
+(cx-gui-do cx-activate-tab-index "Fluid*Frame2*Table3*Frame1" 4)
+(cx-gui-do cx-activate-tab-index "Fluid*Frame2*Table3*Frame1" 0)
+(cx-gui-do cx-activate-tab-index "Fluid*Frame2*Table3*Frame1" 5)
+(cx-gui-do cx-activate-tab-index "Fluid*Frame2*Table3*Frame1" 0)
+(cx-gui-do cx-activate-tab-index "Fluid*Frame2*Table3*Frame1" 6)
+(cx-gui-do cx-activate-tab-index "Fluid*Frame2*Table3*Frame1" 0)
+(cx-gui-do cx-activate-tab-index "Fluid*Frame2*Table3*Frame1" 7)
+(cx-gui-do cx-activate-tab-index "Fluid*Frame2*Table3*Frame1" 0)
+(cx-gui-do cx-activate-tab-index "Fluid*Frame2*Table3*Frame1" 8)
+(cx-gui-do cx-activate-tab-index "Fluid*Frame2*Table3*Frame1" 0)
+(cx-gui-do cx-activate-tab-index "Fluid*Frame2*Table3*Frame1" 9)
+(cx-gui-do cx-activate-tab-index "Fluid*Frame2*Table3*Frame1" 0)
+(cx-gui-do cx-set-list-selections "Fluid*Frame2*Table1*Table1*DropDownList1(Material Name)" '( 0))
+(cx-gui-do cx-enable-apply-button "Fluid")
+(cx-gui-do cx-activate-item "Fluid*Frame2*Table1*Table1*DropDownList1(Material Name)")
+(cx-gui-do cx-activate-item "Fluid*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-activate-item "Fluid*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-enable-apply-button "Fluid")
+(cx-gui-do cx-activate-item "Fluid*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame3(Physics)*Table1*PushButton1(Materials)")
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame3(Physics)*Table1*Table3(Materials)*PushButton1(Create/Edit)")
+(cx-gui-do cx-activate-item "Create/Edit Materials*Table1*Frame1*Frame2*ButtonBox2*PushButton1(Fluent Database)")
+(cx-gui-do cx-activate-item "Fluent Database Materials*PanelButtons*PushButton1(Close)")
+(cx-gui-do cx-activate-item "Create/Edit Materials*PanelButtons*PushButton1(Close)")
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame3(Physics)*Table1*PushButton1(Zones)")
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame3(Physics)*Table1*Table3(Zones)*PushButton1(Cell Zones)")
+(cx-gui-do cx-set-list-selections "Boundary Conditions*Table1*List2(Zone)" '( 0))
+(cx-gui-do cx-activate-item "Boundary Conditions*Table1*List2(Zone)")
+(cx-gui-do cx-activate-item "Boundary Conditions*Table1*Table3*Table4*ButtonBox1*PushButton1(Edit)")
+(cx-gui-do cx-activate-item "Fluid*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-enable-apply-button "Fluid")
+(cx-gui-do cx-activate-item "Fluid*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Boundary Conditions|Inlet|inlet_big (velocity-inlet, id=15)"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Boundary Conditions|Inlet|inlet_big (velocity-inlet, id=15)"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Boundary Conditions|Inlet|inlet_big (velocity-inlet, id=15)"))
+(cx-gui-do cx-activate-tab-index "Velocity Inlet*Frame2*Frame2" 0)
+(cx-gui-do cx-activate-tab-index "Velocity Inlet*Frame2*Frame2" 1)
+(cx-gui-do cx-activate-tab-index "Velocity Inlet*Frame2*Frame2" 0)
+(cx-gui-do cx-activate-tab-index "Velocity Inlet*Frame2*Frame2" 2)
+(cx-gui-do cx-activate-tab-index "Velocity Inlet*Frame2*Frame2" 0)
+(cx-gui-do cx-activate-tab-index "Velocity Inlet*Frame2*Frame2" 3)
+(cx-gui-do cx-activate-tab-index "Velocity Inlet*Frame2*Frame2" 0)
+(cx-gui-do cx-activate-tab-index "Velocity Inlet*Frame2*Frame2" 4)
+(cx-gui-do cx-activate-tab-index "Velocity Inlet*Frame2*Frame2" 0)
+(cx-gui-do cx-activate-tab-index "Velocity Inlet*Frame2*Frame2" 5)
+(cx-gui-do cx-activate-tab-index "Velocity Inlet*Frame2*Frame2" 0)
+(cx-gui-do cx-activate-tab-index "Velocity Inlet*Frame2*Frame2" 6)
+(cx-gui-do cx-activate-tab-index "Velocity Inlet*Frame2*Frame2" 0)
+(cx-gui-do cx-activate-tab-index "Velocity Inlet*Frame2*Frame2" 7)
+(cx-gui-do cx-activate-tab-index "Velocity Inlet*Frame2*Frame2" 0)
+(cx-gui-do cx-activate-tab-index "Velocity Inlet*Frame2*Frame2" 8)
+(cx-gui-do cx-activate-tab-index "Velocity Inlet*Frame2*Frame2" 0)
+(cx-gui-do cx-enable-apply-button "Velocity Inlet")
+(cx-gui-do cx-set-expression-entry "Velocity Inlet*Frame2*Frame2*Frame1(Momentum)*Table1*Table9*ExpressionEntry1(Velocity Magnitude)" '("20" . 0))
+(cx-gui-do cx-activate-tab-index "Velocity Inlet*Frame2*Frame2" 1)
+(cx-gui-do cx-set-expression-entry "Velocity Inlet*Frame2*Frame2*Frame2(Thermal)*Table1*Table1*ExpressionEntry1(Temperature)" '("333.15" . 0))
+(cx-gui-do cx-activate-item "Velocity Inlet*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-activate-tab-index "Velocity Inlet*Frame2*Frame2" 0)
+(cx-gui-do cx-activate-tab-index "Velocity Inlet*Frame2*Frame2" 1)
+(cx-gui-do cx-activate-item "Velocity Inlet*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-activate-item "Velocity Inlet*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Boundary Conditions|Inlet|inlet_small (velocity-inlet, id=16)"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Boundary Conditions|Inlet|inlet_small (velocity-inlet, id=16)"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Boundary Conditions|Inlet|inlet_small (velocity-inlet, id=16)"))
+(cx-gui-do cx-activate-tab-index "Velocity Inlet*Frame2*Frame2" 0)
+(cx-gui-do cx-activate-tab-index "Velocity Inlet*Frame2*Frame2" 1)
+(cx-gui-do cx-activate-tab-index "Velocity Inlet*Frame2*Frame2" 0)
+(cx-gui-do cx-activate-tab-index "Velocity Inlet*Frame2*Frame2" 2)
+(cx-gui-do cx-activate-tab-index "Velocity Inlet*Frame2*Frame2" 0)
+(cx-gui-do cx-activate-tab-index "Velocity Inlet*Frame2*Frame2" 3)
+(cx-gui-do cx-activate-tab-index "Velocity Inlet*Frame2*Frame2" 0)
+(cx-gui-do cx-activate-tab-index "Velocity Inlet*Frame2*Frame2" 4)
+(cx-gui-do cx-activate-tab-index "Velocity Inlet*Frame2*Frame2" 0)
+(cx-gui-do cx-activate-tab-index "Velocity Inlet*Frame2*Frame2" 5)
+(cx-gui-do cx-activate-tab-index "Velocity Inlet*Frame2*Frame2" 0)
+(cx-gui-do cx-activate-tab-index "Velocity Inlet*Frame2*Frame2" 6)
+(cx-gui-do cx-activate-tab-index "Velocity Inlet*Frame2*Frame2" 0)
+(cx-gui-do cx-activate-tab-index "Velocity Inlet*Frame2*Frame2" 7)
+(cx-gui-do cx-activate-tab-index "Velocity Inlet*Frame2*Frame2" 0)
+(cx-gui-do cx-activate-tab-index "Velocity Inlet*Frame2*Frame2" 8)
+(cx-gui-do cx-activate-tab-index "Velocity Inlet*Frame2*Frame2" 0)
+(cx-gui-do cx-enable-apply-button "Velocity Inlet")
+(cx-gui-do cx-set-expression-entry "Velocity Inlet*Frame2*Frame2*Frame1(Momentum)*Table1*Table9*ExpressionEntry1(Velocity Magnitude)" '("30" . 0))
+(cx-gui-do cx-activate-tab-index "Velocity Inlet*Frame2*Frame2" 1)
+(cx-gui-do cx-set-expression-entry "Velocity Inlet*Frame2*Frame2*Frame2(Thermal)*Table1*Table1*ExpressionEntry1(Temperature)" '("373.15" . 0))
+(cx-gui-do cx-activate-item "Velocity Inlet*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-activate-item "Velocity Inlet*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Boundary Conditions|Inlet|inlet_small (velocity-inlet, id=16)"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Boundary Conditions|Inlet|inlet_small (velocity-inlet, id=16)"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Boundary Conditions|Inlet|inlet_small (velocity-inlet, id=16)"))
+(cx-gui-do cx-activate-tab-index "Velocity Inlet*Frame2*Frame2" 0)
+(cx-gui-do cx-activate-item "Velocity Inlet*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-activate-item "Velocity Inlet*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Boundary Conditions|Outlet|outlet (pressure-outlet, id=17)"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Boundary Conditions|Outlet|outlet (pressure-outlet, id=17)"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Boundary Conditions|Outlet|outlet (pressure-outlet, id=17)"))
+(cx-gui-do cx-activate-tab-index "Pressure Outlet*Frame2*Frame2" 0)
+(cx-gui-do cx-activate-tab-index "Pressure Outlet*Frame2*Frame2" 1)
+(cx-gui-do cx-activate-tab-index "Pressure Outlet*Frame2*Frame2" 0)
+(cx-gui-do cx-activate-tab-index "Pressure Outlet*Frame2*Frame2" 2)
+(cx-gui-do cx-activate-tab-index "Pressure Outlet*Frame2*Frame2" 0)
+(cx-gui-do cx-activate-tab-index "Pressure Outlet*Frame2*Frame2" 3)
+(cx-gui-do cx-activate-tab-index "Pressure Outlet*Frame2*Frame2" 0)
+(cx-gui-do cx-activate-tab-index "Pressure Outlet*Frame2*Frame2" 4)
+(cx-gui-do cx-activate-tab-index "Pressure Outlet*Frame2*Frame2" 0)
+(cx-gui-do cx-activate-tab-index "Pressure Outlet*Frame2*Frame2" 5)
+(cx-gui-do cx-activate-tab-index "Pressure Outlet*Frame2*Frame2" 0)
+(cx-gui-do cx-activate-tab-index "Pressure Outlet*Frame2*Frame2" 6)
+(cx-gui-do cx-activate-tab-index "Pressure Outlet*Frame2*Frame2" 0)
+(cx-gui-do cx-activate-tab-index "Pressure Outlet*Frame2*Frame2" 7)
+(cx-gui-do cx-activate-tab-index "Pressure Outlet*Frame2*Frame2" 0)
+(cx-gui-do cx-activate-tab-index "Pressure Outlet*Frame2*Frame2" 8)
+(cx-gui-do cx-activate-tab-index "Pressure Outlet*Frame2*Frame2" 0)
+(cx-gui-do cx-activate-tab-index "Pressure Outlet*Frame2*Frame2" 1)
+(cx-gui-do cx-enable-apply-button "Pressure Outlet")
+(cx-gui-do cx-set-expression-entry "Pressure Outlet*Frame2*Frame2*Frame2(Thermal)*Table1*Table1*ExpressionEntry1(Backflow Total Temperature)" '("333.15" . 0))
+(cx-gui-do cx-activate-item "Pressure Outlet*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-activate-item "Pressure Outlet*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Boundary Conditions|Wall|wall (wall, id=18)"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Boundary Conditions|Wall|wall (wall, id=18)"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Boundary Conditions|Wall|wall (wall, id=18)"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Boundary Conditions|Wall|wall (wall, id=18)"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Boundary Conditions|Wall|wall (wall, id=18)"))
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 0)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 1)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 0)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 2)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 0)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 3)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 0)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 4)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 0)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 5)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 0)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 6)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 0)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 7)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 0)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 8)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 0)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 9)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 0)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 10)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 0)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4*Frame8(Wall Film)*Frame1*Frame2" 0)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4*Frame8(Wall Film)*Frame1*Frame2" 1)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4*Frame8(Wall Film)*Frame1*Frame2" 0)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4*Frame8(Wall Film)*Frame1*Frame2" 2)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4*Frame8(Wall Film)*Frame1*Frame2" 0)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4*Frame8(Wall Film)*Frame1*Frame2" 3)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4*Frame8(Wall Film)*Frame1*Frame2" 0)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4*Frame8(Wall Film)*Frame1*Frame2" 4)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4*Frame8(Wall Film)*Frame1*Frame2" 0)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4*Frame8(Wall Film)*Frame1*Frame2" 5)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4*Frame8(Wall Film)*Frame1*Frame2" 0)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4*Frame8(Wall Film)*Frame1*Frame2" 6)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4*Frame8(Wall Film)*Frame1*Frame2" 0)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 1)
+(cx-gui-do cx-activate-item "Wall*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-activate-item "Wall*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame3(Physics)*Table1*PushButton1(Model Specific)")
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame3(Physics)*Table1*PushButton1(Model Specific)")
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame5(Solution)*Table1*PushButton1(Solution)")
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame5(Solution)*Table1*PushButton1(Controls)")
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame5(Solution)*Table1*PushButton1(Controls)")
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame5(Solution)*Table1*PushButton1(Solution)")
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame5(Solution)*Table1*Table3(Solution)*PushButton1(Methods)")
+(cx-gui-do cx-set-list-selections "Solution Methods*Table1*Table2(Pressure-Velocity Coupling)*DropDownList1(Scheme)" '( 0))
+(cx-gui-do cx-activate-item "Solution Methods*Table1*Table2(Pressure-Velocity Coupling)*DropDownList1(Scheme)")
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame5(Solution)*Table1*Table3(Controls)*PushButton1(Controls)")
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame5(Solution)*Table1*PushButton1(Reports)")
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame5(Solution)*Table1*Table3(Reports)*PushButton1(Residuals)")
+(cx-gui-do cx-activate-item "Residual Monitors*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame5(Solution)*Table1*PushButton1(Reports)")
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame5(Solution)*Table1*Table3(Reports)*PushButton2(Definitions)")
+(cx-gui-do cx-activate-item "MenuBar*Surface ReportSubMenu*Area-Weighted Average...")
+(cx-gui-do cx-set-text-entry "Surface Report Definition*Table1*Table1*TextEntry1(Name)" "outlet_avg_temp")
+(cx-gui-do cx-activate-item "Surface Report Definition*Table1*Table1*TextEntry1(Name)")
+(cx-gui-do cx-set-list-selections "Surface Report Definition*Table1*Table2*Table6*List1(Surfaces)" '( 2))
+(cx-gui-do cx-activate-item "Surface Report Definition*Table1*Table2*Table6*List1(Surfaces)")
+(cx-gui-do cx-set-integer-entry "Surface Report Definition*Table1*Table1*Table6(Create)*IntegerEntry3(Frequency)" 2)
+(cx-gui-do cx-activate-item "Surface Report Definition*Table1*Table1*Table6(Create)*IntegerEntry3(Frequency)")
+(cx-gui-do cx-set-integer-entry "Surface Report Definition*Table1*Table1*Table6(Create)*IntegerEntry3(Frequency)" 3)
+(cx-gui-do cx-activate-item "Surface Report Definition*Table1*Table1*Table6(Create)*IntegerEntry3(Frequency)")
+(cx-gui-do cx-set-integer-entry "Surface Report Definition*Table1*Table1*Table6(Create)*IntegerEntry3(Frequency)" 4)
+(cx-gui-do cx-activate-item "Surface Report Definition*Table1*Table1*Table6(Create)*IntegerEntry3(Frequency)")
+(cx-gui-do cx-set-list-selections "Surface Report Definition*Table1*Table2*DropDownList3(Field Variable)" '( 3))
+(cx-gui-do cx-activate-item "Surface Report Definition*Table1*Table2*DropDownList3(Field Variable)")
+(cx-gui-do cx-activate-item "Surface Report Definition*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame5(Solution)*Table1*PushButton1(Reports)")
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame5(Solution)*Table1*Table3(Reports)*PushButton2(Definitions)")
+(cx-gui-do cx-activate-item "MenuBar*Surface ReportSubMenu*Area-Weighted Average...")
+(cx-gui-do cx-set-text-entry "Surface Report Definition*Table1*Table1*TextEntry1(Name)" "outlet_avg_vel")
+(cx-gui-do cx-activate-item "Surface Report Definition*Table1*Table1*TextEntry1(Name)")
+(cx-gui-do cx-set-list-selections "Surface Report Definition*Table1*Table2*DropDownList3(Field Variable)" '( 2))
+(cx-gui-do cx-activate-item "Surface Report Definition*Table1*Table2*DropDownList3(Field Variable)")
+(cx-gui-do cx-set-list-selections "Surface Report Definition*Table1*Table2*Table6*List1(Surfaces)" '( 2))
+(cx-gui-do cx-activate-item "Surface Report Definition*Table1*Table2*Table6*List1(Surfaces)")
+(cx-gui-do cx-activate-item "Surface Report Definition*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame5(Solution)*Table1*PushButton1(Reports)")
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame5(Solution)*Table1*Table3(Reports)*PushButton2(Definitions)")
+(cx-gui-do cx-activate-item "MenuBar*Flux ReportSubMenu*Mass Flow Rate...")
+(cx-gui-do cx-set-list-selections "Flux Report Definition*Table2*Table2*List2(Boundaries)" '( 3))
+(cx-gui-do cx-activate-item "Flux Report Definition*Table2*Table2*List2(Boundaries)")
+(cx-gui-do cx-set-text-entry "Flux Report Definition*TextEntry1(Name)" "outlet_massflowrate")
+(cx-gui-do cx-activate-item "Flux Report Definition*TextEntry1(Name)")
+(cx-gui-do cx-activate-item "Flux Report Definition*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame5(Solution)*Table1*PushButton1(Initialization)")
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame5(Solution)*Table1*Table3(Initialization)*PushButton6(Initialize)")
+
+Initialize using the hybrid initialization method.
+
+Checking case topology... 
+-This case has both inlets & outlets 
+-Pressure information is not available at the boundaries.
+ Case will be initialized with constant pressure
+
+	iter		scalar-0
+
+	1		1.000000e+00
+	2		1.572553e-04
+	3		1.141839e-05
+	4		1.533164e-06
+	5		1.787593e-07
+	6		2.504301e-08
+	7		4.150628e-09
+	8		7.482599e-10
+	9		1.281865e-10
+	10		2.284379e-11
+
+Hybrid initialization is done.
+(cx-gui-do cx-activate-item "MenuBar*WriteSubMenu*Case & Data...")
+(cx-gui-do cx-set-file-dialog-entries "Select File" '( "initialized.cas.h5") "CFF Case/Data Files (*.cas.h5 *.dat.h5 )")
+
+Writing to DESKTOP-7GPBB94:"D:/works/flowthermolab/assignment 16/initialized.cas.h5" in NODE0 mode and compression level 1 ...
+Grouping cells for Laplace smoothing ...
+  Done.       17670 cells,     1 zone  ...
+       87634 faces,     5 zones ...
+       58708 nodes,     1 zone  ...
+  Done.
+
+  Writing boundary layer flags ...
+  Done.
+Done.
+
+Additional data file quantities are not supported when writing in the default CFF format (.dat.h5 files).
+
+
+Writing to DESKTOP-7GPBB94:"D:/works/flowthermolab/assignment 16/initialized.dat.h5" in NODE0 mode and compression level 1 ...
+  Writing results.
+Done.
+(cx-gui-do cx-activate-item "Information*OK")
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame5(Solution)*Table1*PushButton1(Run Calculation)")
+(cx-gui-do cx-set-integer-entry "Ribbon*Frame1*Frame5(Solution)*Table1*Table3(Run Calculation)*Table6*IntegerEntry16(No  of Iterations)" 200)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame5(Solution)*Table1*Table3(Run Calculation)*Table6*IntegerEntry16(No  of Iterations)")
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame5(Solution)*Table1*Table3(Run Calculation)*PushButton9(Calculate)")
+
+
+  iter  continuity  x-velocity  y-velocity  z-velocity      energy           k       omega     time/iter
+     1  1.0000e+00  3.2476e-03  3.4163e-03  4.5795e-04  1.9116e-04  6.6532e-01  3.6231e-01  0:02:29  199
+     2  6.0672e-01  1.1409e-03  1.1003e-03  5.3683e-04  2.2601e-04  5.3896e-01  3.4053e-01  0:03:33  198
+     3  3.8268e-01  6.0776e-04  6.1450e-04  2.9563e-04  2.0191e-04  2.8807e-01  3.0875e-01  0:02:55  197
+     4  3.0582e-01  4.0424e-04  4.4169e-04  1.7014e-04  1.6038e-04  9.0597e-02  2.6636e-01  0:02:25  196
+     5  2.5950e-01  3.3675e-04  3.2730e-04  1.2725e-04  1.2165e-04  3.3375e-02  2.1666e-01  0:02:45  195
+     6  2.5173e-01  2.7560e-04  2.8816e-04  1.0909e-04  9.3435e-05  2.3255e-02  1.6293e-01  0:02:16  194
+     7  2.3235e-01  2.3868e-04  2.7304e-04  1.0058e-04  7.0720e-05  2.2745e-02  1.1374e-01  0:01:53  193
+     8  1.9847e-01  2.2357e-04  2.6381e-04  9.9082e-05  5.5328e-05  2.2620e-02  7.5360e-02  0:01:36  192
+     9  1.6686e-01  2.1571e-04  2.5712e-04  1.0209e-04  4.6646e-05  2.2615e-02  4.8750e-02  0:01:22  191
+    10  1.4523e-01  2.1297e-04  2.5458e-04  1.0639e-04  4.3232e-05  2.3064e-02  3.1585e-02  0:01:10  190
+    11  1.3114e-01  2.1198e-04  2.5254e-04  1.1090e-04  4.2411e-05  2.3980e-02  2.0935e-02  0:01:01  189
+
+  iter  continuity  x-velocity  y-velocity  z-velocity      energy           k       omega     time/iter
+    12  1.1986e-01  2.1279e-04  2.5055e-04  1.1528e-04  4.2924e-05  2.4189e-02  1.4401e-02  0:00:54  188
+    13  1.1646e-01  2.1166e-04  2.5105e-04  1.1924e-04  4.4426e-05  2.3456e-02  1.0266e-02  0:00:49  187
+    14  1.1849e-01  2.0901e-04  2.5168e-04  1.2263e-04  4.7501e-05  2.2552e-02  7.6390e-03  0:00:44  186
+    15  1.2180e-01  2.0423e-04  2.5225e-04  1.2598e-04  5.0156e-05  2.1861e-02  5.8437e-03  0:00:40  185
+    16  1.2216e-01  1.9922e-04  2.5042e-04  1.2788e-04  4.8706e-05  2.0882e-02  4.5565e-03  0:00:36  184
+    17  1.1694e-01  1.9446e-04  2.4867e-04  1.2846e-04  4.4667e-05  1.9553e-02  3.6478e-03  0:00:34  183
+    18  1.0690e-01  1.8990e-04  2.4573e-04  1.2769e-04  4.0023e-05  1.8354e-02  2.9776e-03  0:00:32  182
+    19  9.6176e-02  1.8496e-04  2.4210e-04  1.2537e-04  3.5533e-05  1.7537e-02  2.4558e-03  0:00:30  181
+    20  8.7982e-02  1.7988e-04  2.3572e-04  1.2209e-04  3.1866e-05  1.6465e-02  2.0322e-03  0:00:29  180
+    21  8.1498e-02  1.7437e-04  2.2812e-04  1.1793e-04  2.9093e-05  1.5067e-02  1.6852e-03  0:00:28  179
+    22  7.6137e-02  1.6865e-04  2.1941e-04  1.1323e-04  2.5358e-05  1.3976e-02  1.4170e-03  0:00:27  178
+
+  iter  continuity  x-velocity  y-velocity  z-velocity      energy           k       omega     time/iter
+    23  7.1283e-02  1.6205e-04  2.1068e-04  1.0781e-04  2.1445e-05  1.3167e-02  1.2016e-03  0:00:26  177
+    24  6.6890e-02  1.5535e-04  2.0193e-04  1.0190e-04  1.7951e-05  1.2364e-02  1.0213e-03  0:00:25  176
+    25  6.2848e-02  1.4829e-04  1.9332e-04  9.5844e-05  1.5461e-05  1.1479e-02  8.7172e-04  0:00:25  175
+    26  5.9126e-02  1.4091e-04  1.8550e-04  9.0175e-05  1.3814e-05  1.0496e-02  7.5116e-04  0:00:24  174
+    27  5.5567e-02  1.3316e-04  1.7907e-04  8.4813e-05  1.2891e-05  9.5118e-03  6.5252e-04  0:00:24  173
+    28  5.1821e-02  1.2551e-04  1.7301e-04  7.9916e-05  1.2796e-05  8.7200e-03  5.7219e-04  0:00:24  172
+    29  4.8116e-02  1.1772e-04  1.6563e-04  7.5574e-05  1.3183e-05  8.0155e-03  5.1025e-04  0:00:24  171
+    30  4.4456e-02  1.1027e-04  1.5718e-04  7.1797e-05  1.3870e-05  7.3142e-03  4.6142e-04  0:00:23  170
+    31  4.1237e-02  1.0331e-04  1.4861e-04  6.8154e-05  1.4389e-05  6.6368e-03  4.1814e-04  0:00:23  169
+    32  3.8509e-02  9.6733e-05  1.3888e-04  6.4769e-05  1.4589e-05  6.0341e-03  3.7804e-04  0:00:22  168
+    33  3.6135e-02  9.0433e-05  1.2849e-04  6.1540e-05  1.4537e-05  5.5015e-03  3.4131e-04  0:00:23  167
+
+  iter  continuity  x-velocity  y-velocity  z-velocity      energy           k       omega     time/iter
+    34  3.3965e-02  8.4325e-05  1.1774e-04  5.8297e-05  1.4224e-05  5.0169e-03  3.0839e-04  0:00:22  166
+    35  3.1961e-02  7.8440e-05  1.0768e-04  5.5100e-05  1.3660e-05  4.5733e-03  2.7887e-04  0:00:22  165
+    36  3.0114e-02  7.2618e-05  9.7791e-05  5.1867e-05  1.2960e-05  4.1557e-03  2.5140e-04  0:00:21  164
+    37  2.8273e-02  6.6998e-05  8.8689e-05  4.8587e-05  1.2086e-05  3.7649e-03  2.2562e-04  0:00:22  163
+    38  2.6343e-02  6.1534e-05  8.0355e-05  4.5299e-05  1.1173e-05  3.4020e-03  2.0162e-04  0:00:21  162
+    39  2.4345e-02  5.6388e-05  7.2522e-05  4.2024e-05  1.0298e-05  3.0545e-03  1.7951e-04  0:00:21  161
+    40  2.2355e-02  5.1395e-05  6.5115e-05  3.8860e-05  9.4023e-06  2.7250e-03  1.5931e-04  0:00:21  160
+    41  2.0367e-02  4.6570e-05  5.8478e-05  3.5682e-05  8.5012e-06  2.4149e-03  1.4115e-04  0:00:21  159
+    42  1.8457e-02  4.2041e-05  5.2549e-05  3.2557e-05  7.6478e-06  2.1269e-03  1.2516e-04  0:00:21  158
+    43  1.6670e-02  3.7878e-05  4.7269e-05  2.9574e-05  6.9956e-06  1.8627e-03  1.1116e-04  0:00:20  157
+    44  1.5002e-02  3.4012e-05  4.2733e-05  2.6708e-05  6.4252e-06  1.6226e-03  9.8952e-05  0:00:20  156
+
+  iter  continuity  x-velocity  y-velocity  z-velocity      energy           k       omega     time/iter
+    45  1.3471e-02  3.0472e-05  3.8815e-05  2.3999e-05  5.8229e-06  1.4069e-03  8.8322e-05  0:00:21  155
+    46  1.2086e-02  2.7242e-05  3.5474e-05  2.1436e-05  5.2634e-06  1.2157e-03  7.8918e-05  0:00:20  154
+    47  1.0830e-02  2.4289e-05  3.2577e-05  1.9059e-05  4.8125e-06  1.0490e-03  7.0758e-05  0:00:20  153
+    48  9.6813e-03  2.1653e-05  3.0108e-05  1.6900e-05  4.3932e-06  9.0618e-04  6.3694e-05  0:00:19  152
+    49  8.6291e-03  1.9249e-05  2.7846e-05  1.4955e-05  4.0242e-06  7.8553e-04  5.7433e-05  0:00:20  151
+    50  7.6404e-03  1.7100e-05  2.5652e-05  1.3202e-05  3.6878e-06  6.8404e-04  5.1802e-05  0:00:19  150
+    51  6.7505e-03  1.5154e-05  2.3663e-05  1.1631e-05  3.4293e-06  5.9866e-04  4.6712e-05  0:00:19  149
+    52  5.9661e-03  1.3415e-05  2.1816e-05  1.0244e-05  3.1837e-06  5.2659e-04  4.2095e-05  0:00:19  148
+    53  5.2629e-03  1.1860e-05  2.0036e-05  9.0400e-06  2.9629e-06  4.6419e-04  3.7895e-05  0:00:19  147
+    54  4.6380e-03  1.0475e-05  1.8350e-05  8.0045e-06  2.7701e-06  4.0949e-04  3.4021e-05  0:00:19  146
+    55  4.0857e-03  9.2470e-06  1.6777e-05  7.1091e-06  2.5799e-06  3.6170e-04  3.0439e-05  0:00:19  145
+
+  iter  continuity  x-velocity  y-velocity  z-velocity      energy           k       omega     time/iter
+    56  3.6012e-03  8.1676e-06  1.5315e-05  6.3437e-06  2.4077e-06  3.1993e-04  2.7196e-05  0:00:18  144
+    57  3.1803e-03  7.2303e-06  1.3959e-05  5.6864e-06  2.2331e-06  2.8354e-04  2.4283e-05  0:00:19  143
+    58  2.8102e-03  6.4228e-06  1.2720e-05  5.1230e-06  2.0643e-06  2.5182e-04  2.1674e-05  0:00:18  142
+    59  2.4995e-03  5.7466e-06  1.1582e-05  4.6278e-06  1.9058e-06  2.2454e-04  1.9323e-05  0:00:18  141
+    60  2.2328e-03  5.1790e-06  1.0547e-05  4.1830e-06  1.7632e-06  2.0099e-04  1.7218e-05  0:00:32  140
+    61  1.9948e-03  4.6865e-06  9.6111e-06  3.7841e-06  1.6325e-06  1.8071e-04  1.5364e-05  0:00:29  139
+    62  1.7813e-03  4.2514e-06  8.7631e-06  3.4302e-06  1.5103e-06  1.6297e-04  1.3719e-05  0:00:27  138
+    63  1.5944e-03  3.8582e-06  7.9928e-06  3.1184e-06  1.3954e-06  1.4704e-04  1.2253e-05  0:00:24  137
+    64  1.4350e-03  3.5123e-06  7.2911e-06  2.8439e-06  1.2875e-06  1.3284e-04  1.0961e-05  0:00:23  136
+    65  1.2983e-03  3.2200e-06  6.6430e-06  2.6007e-06  1.1879e-06  1.2026e-04  9.8270e-06  0:00:22  135
+    66  1.1783e-03  2.9592e-06  6.0478e-06  2.3836e-06  1.0960e-06  1.0906e-04  8.8447e-06  0:00:21  134
+
+  iter  continuity  x-velocity  y-velocity  z-velocity      energy           k       omega     time/iter
+    67  1.0724e-03  2.7226e-06  5.5048e-06  2.1897e-06  1.0116e-06  9.8871e-05  7.9717e-06  0:00:20  133
+    68  9.7999e-04  2.5061e-06  5.0111e-06  2.0127e-06  9.3183e-07  8.9597e-05  7.1981e-06  0:00:19  132
+!   68 solution is converged
+
+Calculation complete.
+(cx-gui-do cx-activate-item "Information*OK")
+(cx-gui-do cx-activate-item "MenuBar*WriteSubMenu*Case & Data...")
+(cx-gui-do cx-set-file-dialog-entries "Select File" '( "final.cas.h5") "CFF Case/Data Files (*.cas.h5 *.dat.h5 )")
+
+Writing to DESKTOP-7GPBB94:"D:/works/flowthermolab/assignment 16/final.cas.h5" in NODE0 mode and compression level 1 ...
+Grouping cells for Laplace smoothing ...
+       17670 cells,     1 zone  ...
+       87634 faces,     5 zones ...
+       58708 nodes,     1 zone  ...
+  Done.
+
+  Writing boundary layer flags ...
+  Done.
+Done.
+
+Additional data file quantities are not supported when writing in the default CFF format (.dat.h5 files).
+
+
+Writing to DESKTOP-7GPBB94:"D:/works/flowthermolab/assignment 16/final.dat.h5" in NODE0 mode and compression level 1 ...
+  Writing results.
+Done.
+(cx-gui-do cx-activate-item "Information*OK")
+(cx-use-window-id 51)
+(cx-set-camera-relative '(0.116731 -0.305324 -1.85389) '(0 0 0) '(-0.211767 -0.319195 -0.283988) 0 0)
+(cx-use-window-id 51)
+(cx-set-camera-relative '(-0.754009 1.36881 0.485015) '(0 0 0) '(-0.322423 -0.0150784 0.328339) 0 0)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame5(Solution)*Table1*Table3(Controls)*PushButton2(Equations)")
+(cx-gui-do cx-activate-item "Equations*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame5(Solution)*Table1*Table3(Controls)*PushButton4(Advanced)")
+(cx-gui-do cx-activate-tab-index "Advanced Solution Controls*Frame1" 0)
+(cx-gui-do cx-activate-tab-index "Advanced Solution Controls*Frame1" 1)
+(cx-gui-do cx-activate-tab-index "Advanced Solution Controls*Frame1" 0)
+(cx-gui-do cx-activate-tab-index "Advanced Solution Controls*Frame1" 2)
+(cx-gui-do cx-activate-tab-index "Advanced Solution Controls*Frame1" 0)
+(cx-gui-do cx-activate-item "Advanced Solution Controls*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame5(Solution)*Table1*PushButton1(Activities)")
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame5(Solution)*Table1*Table3(Activities)*PushButton2(Create)")
+/exit y
+
+Posting ANSYS Product Improvement Program performance data 
+Done.
+Auto-Transcript Stop Time:  00:53:51, 02 Jul 2026 Bangladesh Standard Time 
+Total Transcript Time: 28 Minute 47 Second.
