@@ -1,4 +1,5 @@
 chord length: 32 mm
+angle of attack: 0°
 inlet vel: 200 m/s, 298K
 material: air(compressible flow, density = ideal gas)
 viscous: SST k-omega(2 eqn)
